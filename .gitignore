@@ -1,0 +1,12 @@
+# ---------------------------------------------------------------- #
+# ARQUIVOS DE CONFIGURACAO E COMPILACAO GERAL
+# ---------------------------------------------------------------- #
+.project
+.classpath
+.settings/
+.metadata
+bin/
+**/target/       # Ignora a pasta 'target/' em QUALQUER subdiretório Maven
+**/bin/         # Ignora a pasta 'bin/' em QUALQUER subdiretório Eclipse
+*.log
+*.tmp

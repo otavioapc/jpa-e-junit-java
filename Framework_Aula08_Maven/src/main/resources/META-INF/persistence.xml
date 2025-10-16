@@ -1,0 +1,40 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+
+	<!-- Nome da unidade de persistência que será utilizada no projeto. Nome do
+	schema-->
+	<persistence-unit name="jpa_exemplo">
+
+
+		<!-- provedor/implementacao do JPA -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!-- entidade mapeada -->
+		<class> </class>
+
+		<properties>
+			<!-- dados da conexao -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/nome_do_seu_banco" />
+			<property name="javax.persistence.jdbc.user" value="usuario_teste" />
+			<property name="javax.persistence.jdbc.password" value="SUA_SENHA_AQUI" />
+
+			<!--  propriedades do hibernate -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!--  atualiza o banco, gera as tabelas se for preciso -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+
+	</persistence-unit>
+
+</persistence> 
